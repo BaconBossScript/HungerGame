@@ -1,0 +1,299 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "BaconBoss Hub | Academy Adventures The Hunger Games", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+
+getgenv().tpPlace = "string"
+
+function Teleport(teleportPlace)
+    local player = game.Players.LocalPlayer
+    player.Character.HumanoidRootPart.CFrame = teleportPlace
+end
+
+
+local TpTab = Window:MakeTab({
+	Name = "Bird",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tp1Tab = Window:MakeTab({
+	Name = "Guitar",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tp2Tab = Window:MakeTab({
+	Name = "Rose",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tp3Tab = Window:MakeTab({
+	Name = "Snake",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+TpTab:AddButton({
+	Name = "Collect Birds",
+	Callback = function()
+	    if getgenv().tpPlace == "1" then
+      	    Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item1.Part.CFrame)
+		elseif getgenv().tpPlace == "2" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item2.Part.CFrame)
+        elseif getgenv().tpPlace == "3" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item3.Part.CFrame)
+        elseif getgenv().tpPlace == "4" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item4.Part.CFrame)
+        elseif getgenv().tpPlace == "5" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item5.Part.CFrame)
+        elseif getgenv().tpPlace == "6" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item6.Part.CFrame)
+        elseif getgenv().tpPlace == "7" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item7.Part.CFrame)
+        elseif getgenv().tpPlace == "8" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item8.Part.CFrame)
+        elseif getgenv().tpPlace == "9" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item9.Part.CFrame)
+        elseif getgenv().tpPlace == "10" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item10.Part.CFrame)
+        elseif getgenv().tpPlace == "11" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item11.Part.CFrame)
+        elseif getgenv().tpPlace == "12" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item12.Part.CFrame)
+        elseif getgenv().tpPlace == "13" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item13.Part.CFrame)
+        elseif getgenv().tpPlace == "14" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item14.Part.CFrame)
+        elseif getgenv().tpPlace == "15" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item15.Part.CFrame)
+        elseif getgenv().tpPlace == "16" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item16.Part.CFrame)
+        elseif getgenv().tpPlace == "17" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item17.Part.CFrame)  
+        elseif getgenv().tpPlace == "18" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item18.Part.CFrame)
+        elseif getgenv().tpPlace == "19" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item19.Part.CFrame)
+        elseif getgenv().tpPlace == "20" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item20.Part.CFrame)
+        elseif getgenv().tpPlace == "21" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item21.Part.CFrame)   
+        elseif getgenv().tpPlace == "22" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item22.Part.CFrame)
+        elseif getgenv().tpPlace == "23" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item23.Part.CFrame)
+        elseif getgenv().tpPlace == "24" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item24.Part.CFrame)
+        elseif getgenv().tpPlace == "25" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedBirds.Item25.Part.CFrame)   
+        end
+    end
+}) 
+
+TpTab:AddDropdown({
+	Name = "Select",
+	Default = "1",
+	Options = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"},
+	Callback = function(Value)
+	    getgenv().tpPlace = Value  
+	end    
+})
+
+Tp1Tab:AddButton({
+	Name = "Collect Guitars",
+	Callback = function()
+	    if getgenv().tpPlace == "1" then
+      	    Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item1.Part.CFrame)
+		elseif getgenv().tpPlace == "2" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item2.Part.CFrame)
+        elseif getgenv().tpPlace == "3" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item3.Part.CFrame)
+        elseif getgenv().tpPlace == "4" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item4.Part.CFrame)
+        elseif getgenv().tpPlace == "5" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item5.Part.CFrame)
+        elseif getgenv().tpPlace == "6" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item6.Part.CFrame)
+        elseif getgenv().tpPlace == "7" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item7.Part.CFrame)
+        elseif getgenv().tpPlace == "8" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item8.Part.CFrame)
+        elseif getgenv().tpPlace == "9" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item9.Part.CFrame)
+        elseif getgenv().tpPlace == "10" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item10.Part.CFrame)
+        elseif getgenv().tpPlace == "11" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item11.Part.CFrame)
+        elseif getgenv().tpPlace == "12" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item12.Part.CFrame)
+        elseif getgenv().tpPlace == "13" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item13.Part.CFrame)
+        elseif getgenv().tpPlace == "14" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item14.Part.CFrame)
+        elseif getgenv().tpPlace == "15" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item15.Part.CFrame)
+        elseif getgenv().tpPlace == "16" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item16.Part.CFrame)
+        elseif getgenv().tpPlace == "17" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item17.Part.CFrame)
+        elseif getgenv().tpPlace == "18" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item18.Part.CFrame)
+        elseif getgenv().tpPlace == "19" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item19.Part.CFrame)
+        elseif getgenv().tpPlace == "20" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item20.Part.CFrame)
+        elseif getgenv().tpPlace == "21" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item21.Part.CFrame)
+        elseif getgenv().tpPlace == "22" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item22.Part.CFrame)
+        elseif getgenv().tpPlace == "23" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item23.Part.CFrame)
+        elseif getgenv().tpPlace == "24" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item24.Part.CFrame)
+        elseif getgenv().tpPlace == "25" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedGuitars.Item25.Part.CFrame)
+        end
+    end
+}) 
+
+Tp1Tab:AddDropdown({
+	Name = "Select",
+	Default = "1",
+	Options = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"},
+	Callback = function(Value)
+	    getgenv().tpPlace = Value  
+	end    
+})
+
+Tp2Tab:AddButton({
+	Name = "Collect Roses",
+	Callback = function()
+	    if getgenv().tpPlace == "1" then
+      	    Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item1.Part.CFrame)
+		elseif getgenv().tpPlace == "2" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item2.Part.CFrame)
+        elseif getgenv().tpPlace == "3" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item3.Part.CFrame)
+        elseif getgenv().tpPlace == "4" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item4.Part.CFrame)
+        elseif getgenv().tpPlace == "5" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item5.Part.CFrame)
+        elseif getgenv().tpPlace == "6" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item6.Part.CFrame)
+        elseif getgenv().tpPlace == "7" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item7.Part.CFrame)
+        elseif getgenv().tpPlace == "8" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item8.Part.CFrame)
+        elseif getgenv().tpPlace == "9" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item9.Part.CFrame)
+        elseif getgenv().tpPlace == "10" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item10.Part.CFrame)
+        elseif getgenv().tpPlace == "11" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item11.Part.CFrame)
+        elseif getgenv().tpPlace == "12" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item12.Part.CFrame)
+        elseif getgenv().tpPlace == "13" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item13.Part.CFrame)
+        elseif getgenv().tpPlace == "14" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item14.Part.CFrame)
+        elseif getgenv().tpPlace == "15" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item15.Part.CFrame)
+        elseif getgenv().tpPlace == "16" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item16.Part.CFrame)
+        elseif getgenv().tpPlace == "17" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item17.Part.CFrame)
+        elseif getgenv().tpPlace == "18" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item18.Part.CFrame)
+        elseif getgenv().tpPlace == "19" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item19.Part.CFrame)
+        elseif getgenv().tpPlace == "20" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item20.Part.CFrame)
+        elseif getgenv().tpPlace == "21" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item21.Part.CFrame)
+        elseif getgenv().tpPlace == "22" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item22.Part.CFrame)
+        elseif getgenv().tpPlace == "23" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item23.Part.CFrame)
+        elseif getgenv().tpPlace == "24" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item24.Part.CFrame)
+        elseif getgenv().tpPlace == "25" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedRoses.Item25.Part.CFrame)
+        end
+    end
+}) 
+
+Tp2Tab:AddDropdown({
+	Name = "Select",
+	Default = "1",
+	Options = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"},
+	Callback = function(Value)
+	    getgenv().tpPlace = Value  
+	end    
+})
+
+Tp3Tab:AddButton({
+	Name = "Collect Snakes",
+	Callback = function()
+	    if getgenv().tpPlace == "1" then
+      	    Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item1.Part.CFrame)
+		elseif getgenv().tpPlace == "2" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item2.Part.CFrame)
+        elseif getgenv().tpPlace == "3" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item3.Part.CFrame)
+        elseif getgenv().tpPlace == "4" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item4.Part.CFrame)
+        elseif getgenv().tpPlace == "5" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item5.Part.CFrame)
+        elseif getgenv().tpPlace == "6" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item6.Part.CFrame)
+        elseif getgenv().tpPlace == "7" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item7.Part.CFrame)
+        elseif getgenv().tpPlace == "8" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item8.Part.CFrame)
+        elseif getgenv().tpPlace == "9" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item9.Part.CFrame)
+        elseif getgenv().tpPlace == "10" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item10.Part.CFrame)
+        elseif getgenv().tpPlace == "11" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item11.Part.CFrame)
+        elseif getgenv().tpPlace == "12" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item12.Part.CFrame)
+        elseif getgenv().tpPlace == "13" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item13.Part.CFrame)
+        elseif getgenv().tpPlace == "14" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item14.Part.CFrame)
+        elseif getgenv().tpPlace == "15" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item15.Part.CFrame)
+        elseif getgenv().tpPlace == "16" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item16.Part.CFrame)
+        elseif getgenv().tpPlace == "17" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item17.Part.CFrame)
+        elseif getgenv().tpPlace == "18" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item18.Part.CFrame)
+        elseif getgenv().tpPlace == "19" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item19.Part.CFrame)
+        elseif getgenv().tpPlace == "20" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item20.Part.CFrame)
+        elseif getgenv().tpPlace == "21" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item21.Part.CFrame)
+        elseif getgenv().tpPlace == "22" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item22.Part.CFrame)
+        elseif getgenv().tpPlace == "23" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item23.Part.CFrame)
+        elseif getgenv().tpPlace == "24" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item24.Part.CFrame)
+        elseif getgenv().tpPlace == "25" then
+            Teleport(game:GetService("Workspace").SCAVENGER_ITEMS.collectedSnakes.Item25.Part.CFrame)
+        end
+    end
+}) 
+
+Tp3Tab:AddDropdown({
+	Name = "Select",
+	Default = "1",
+	Options = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25"},
+	Callback = function(Value)
+	    getgenv().tpPlace = Value  
+	end    
+})
